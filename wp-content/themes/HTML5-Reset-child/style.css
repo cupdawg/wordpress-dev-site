@@ -11,9 +11,69 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  html5-reset-child
 */
-
+/* load web fonts */
+@font-face{
+    font-family: 'Almendra';
+    src: url('fonts/Almendra-Regular.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Amerika';
+    src: url('fonts/AMERIKA_.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Archery';
+    src: url('fonts/SF_Archery_Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 /* Add original CSS below */
 
-body{
-	font-family: Consolas, monospace;
+.fontface{
+	font-family: 'Almendra', 'Calibri', monospace;
+}
+
+.container h1, 
+.container h2, 
+.container h3,
+.container h4,
+.container h5,
+.container h6{
+    font-family: 'Archery';
+}
+
+.container h1 a, 
+.container h2 a,
+.container h3 a{
+    color: #6699CC;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, 
+h1, h2, h3, h4, h5, h6{
+    color: #FEAA72 !important;
+}
+
+em{
+    font-style: italic;
+}
+
+strong{
+    font-style: normal;
+}
+
+div.container{
+    width:100%;
+}
+
+::selection{
+    background: #336699;
+}
+/* end of phone portrait */
+
+/* medium styles */
+@media (min-width:927px) {
+    div.container{
+    width:910px;
+    }
 }

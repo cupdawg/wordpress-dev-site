@@ -130,7 +130,7 @@
 <body <?php body_class(); ?>>
 
 	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-	<div id="wrapper container">
+	<div class="wrapper container">
 
 		<header id="header" role="banner">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -138,6 +138,11 @@
 		</header>
 
 		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+            <button type="button" class="btn btn-default btn-lg responsive-toggle">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+			<?php wp_nav_menu( array('theme_location' => 'primary',
+                                        'menu_class' => 'nav nav-pills',
+                                        'container' => 'ul' ) ); ?>
 		</nav>
 

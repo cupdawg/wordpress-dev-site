@@ -6,6 +6,8 @@
  */
  get_header(); ?>
 	<!-- index.php -->
+<div class="row">
+    <section class="col-md-8">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -35,7 +37,9 @@
 		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
 
 	<?php endif; ?>
-
-<?php get_sidebar(); ?>
-
+    </section>
+    <aside class="col-md-4">
+        <?php get_sidebar(); ?>
+    </aside>
+</div>
 <?php get_footer(); ?>

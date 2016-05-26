@@ -1,0 +1,77 @@
+/* mobile 1st navigation.css */
+
+.current_page_item a {
+    background-color: #FFE8C6;
+    color: black;
+}
+ul.nav-pills>li {
+    float: none;
+}
+ul.nav-pills>li+li{
+    margin-left: 0;
+}
+ul.nav-pills>li>a{
+    border: 1px solid #FE8E0D;
+    background-color: #FFE8C6;
+}
+/* hide nested links in navbar */
+ul.children{
+    opacity: 0;
+    height: 0;
+    -webkit-transition:all 1s;
+    transition:all 1s;
+}
+li:hover>ul.children{
+    opacity: 1;
+    height: auto;
+}
+li:hover>ul.children li{
+    height: auto;
+    padding: .5em 1em;
+    border: 1px solid #FE8E0D;
+}
+li:hover>ul.children a{
+    padding: 1em;
+    height: 1.5em;
+    text-decoration: none;
+}
+/* Responsive toggle */
+.btn.btn-default.btn-lg.responsive-toggle{
+    height: auto;
+    margin: 1em 0 1em 0;
+    opacity: 1;
+}
+/* End of phone portrait */
+
+@media (min-width:768px) {
+     /* hide Responsive toggle */
+.btn.btn-default.btn-lg.responsive-toggle,
+.nested-toggle{
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    }
+li:hover>ul.children{
+    opacity: 1;
+    height: auto;
+}
+li:hover>ul.children li{
+    height: auto;
+    padding: .5em 1em;
+    border: 1px solid #FE8E0D;
+}
+li:hover>ul.children a{
+    padding: 1em;
+    height: 1.5em;
+    text-decoration: none;
+}
+/* Medium width styles (min 927px) */
+
+@media (min-width:927px) {
+    ul.nav-pills>li{
+        float: left;
+    }
+    ul.nav-pills>li+li {
+        margin-left: 2px;
+    }
+} 
